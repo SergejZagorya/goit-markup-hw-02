@@ -31,9 +31,11 @@ a {
 }
 .list {
   list-style: none;
+  font-style: normal;
 }
 
 .link:hover,
 .link:focus {
   color: var(--accent-color);
 }
+
