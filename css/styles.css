@@ -11,11 +11,24 @@
   --accent-font: "Raleway", sans-serif;
   --hero-size: 44px;
   --title-size: 36px;
+  --subtitle-size: 18px;
   --note-size: 16px;
   --text-size: 14px;
   --hero-weight: 900;
   --head-weight: 700;
+  --secondary-weight: 500;
   --main-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+li,
+ul,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 *,
@@ -24,21 +37,35 @@
   box-sizing: border-box;
 }
 .body {
+  /* TODO: убрать в ДЗ№ 3 */
+  padding-left: 15px;
   font-family: var(--main-font);
   font-style: normal;
-  font-weight: var(--main-weight);
-  font-size: var(--text-size);
   color: var(--text-color);
   background-color: var(--primary-background-color);
+}
+
+/* скрытый заголовок */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 a {
   text-decoration: none;
   color: var(--title-color);
 }
-.list {
+ul {
+  padding-left: 0;
   list-style: none;
-  font-style: normal;
 }
 
 .link:hover,
@@ -46,11 +73,17 @@ a {
   color: var(--accent-color);
 }
 
+a:focus,
+button:focus {
+  outline: none;
+}
+
 .current {
   color: var(--accent-color);
 }
 
 button {
+  font-style: inherit;
   cursor: pointer;
   border: none;
   border-radius: 4px;
@@ -67,112 +100,110 @@ button:focus {
   font-family: var(--accent-font);
   font-weight: var(--head-weight);
   font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
 }
-
 .accent {
   color: var(--accent-color);
 }
 /* кнопки навигации */
-.nav {
-  font-weight: 500;
-  font-size: var(--text-size);
+.nav-link {
+  font-weight: var(--secondary-weight);
+  font-size: inherit;
   line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 /* адрес в header  */
-.header-address {
-  font-weight: 500;
-  font-size: var(--text-size);
+.header-contacts {
+  font-weight: var(--secondary-weight);
+  font-size: inherit;
   line-height: 1.14;
+  letter-spacing: 0.02em;
   color: var(--text-color);
-}
-/* скрытый заголовок преймущества */
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
 }
 
 /* hero */
 .hero {
   background-color: var(--hero-background-color);
 }
-/* заголовок героя */
+/* заголовок героя h1*/
 .hero-title {
   margin: 0 auto;
+  text-align: center;
   font-weight: var(--hero-weight);
   font-size: var(--hero-size);
   line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--primary-background-color);
-  text-align: center;
 }
 /* кнопка героя */
 .hero-button {
   margin: 0 auto;
   padding: 10px 32px;
   min-width: 200px;
-  background-color: var(--accent-color);
-  font-weight: var(--head-weight);
-  font-size: var(--note-size);
-  color: var(--primary-background-color);
-  line-height: 1.88;
   display: block;
   align-items: center;
   text-align: center;
+  font-weight: var(--head-weight);
+  font-size: var(--note-size);
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--primary-background-color);
+  background-color: var(--accent-color);
 }
 
-/* Преймущества  */
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #188ce8;
+}
+
+/* Преимущества  */
+/* Заголовки h3 */
 .advant-title {
-  margin: 0;
   font-weight: var(--head-weight);
   font-size: var(--text-size);
   line-height: 1.14;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
   color: var(--title-color);
 }
-/* текст преймущества */
+/* текст преимущества p */
 .advant-text {
-  margin: 0;
   line-height: 1.71;
+  letter-spacing: 0.03em;
 }
-/* названия секций */
+/* названия секций h2*/
 .title {
-  margin: 0;
   font-weight: var(--head-weight);
   font-size: var(--title-size);
   line-height: 1.17;
-  /* text-align: center; */
+  letter-spacing: 0.03em;
   color: var(--title-color);
 }
 
+/* Наша команда */
 .team-section {
   background-color: var(--secondary-background-color);
 }
-/* имя фамилия */
+/* имя фамилия h2 */
 .team-name {
-  margin: 0;
   font-weight: 500;
   font-size: var(--note-size);
   line-height: 1.18;
-  /* text-align: center; */
+  letter-spacing: 0.03em;
   color: var(--title-color);
 }
 
-/* должности */
+/* должности p */
 .team-descr {
-  margin: 0;
   font-size: var(--note-size);
   line-height: 1.18;
-  /* text-align: center; */
+  letter-spacing: 0.03em;
   color: var(--text-color);
 }
 
+/* Footer */
 .footer {
   background-color: var(--title-color);
 }
@@ -181,12 +212,19 @@ button:focus {
   color: var(--primary-background-color);
 }
 
+.address {
+  font-style: inherit;
+}
+
 .footer-address {
+  font-size: inherit;
   line-height: 1.71;
+  letter-spacing: 0.03em;
   color: var(--primary-background-color);
 }
 
-.contakts {
+.footer-contacts {
+  font-size: inherit;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -194,28 +232,31 @@ button:focus {
 /* ПОРТФОЛИО */
 .portf-btn {
   padding: 6px 22px;
-  font-weight: 500;
+  font-weight: var(--secondary-weight);
   font-size: var(--note-size);
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
+  background-color: var(--secondary-background-color);
+}
+
+.portf-btn:hover,
+.portf-btn:focus {
+  color: var(--primary-background-color);
 }
 
 .portf-name {
-  margin: 0;
   font-weight: var(--head-weight);
-  font-size: var(--note-size);
+  font-size: var(--subtitle-size);
   line-height: 1.18;
-  /* text-align: center; */
   letter-spacing: 0.03em;
   color: var(--title-color);
 }
 
 .portf-descr {
-  margin: 0;
   font-size: var(--note-size);
   line-height: 1.18;
-  /* text-align: center; */
+  letter-spacing: 0.03em;
   color: var(--text-color);
 }
