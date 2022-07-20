@@ -5,7 +5,12 @@
 
   --title-color: #212121;
   --text-color: #757575;
+  --logo-color: #000000;
   --accent-color: #2196f3;
+  --header-boarder-color: #ececec;
+  --hero-hover-color: #188ce8;
+  --footer-address-color: rgba(255, 255, 255, 0.6);
+  --portf-boarder-color: #eeeeee;
 
   --main-font: "Roboto", sans-serif;
   --accent-font: "Raleway", sans-serif;
@@ -37,15 +42,16 @@ p {
   box-sizing: border-box;
 }
 .body {
-  /* TODO: убрать в ДЗ№ 3 */
   padding-left: 15px;
+  /* TODO: убрать в ДЗ№ 3 */
+
   font-family: var(--main-font);
   font-style: normal;
   color: var(--text-color);
   background-color: var(--primary-background-color);
 }
 
-/* скрытый заголовок */
+/* скрытые заголовки */
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -102,6 +108,7 @@ button:focus {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  color: var(--logo-color);
 }
 .accent {
   color: var(--accent-color);
@@ -119,7 +126,11 @@ button:focus {
   font-size: inherit;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--text-color);
+  color: inherit;
+}
+
+.page-header {
+  border-bottom: 1px solid var(--header-boarder-color);
 }
 
 /* hero */
@@ -155,13 +166,12 @@ button:focus {
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: #188ce8;
+  background-color: var(--hero-hover-color);
 }
 
 /* Преимущества  */
 /* Заголовки h3 */
 .advant-title {
-  font-weight: var(--head-weight);
   font-size: var(--text-size);
   line-height: 1.14;
   text-transform: uppercase;
@@ -174,8 +184,7 @@ button:focus {
   letter-spacing: 0.03em;
 }
 /* названия секций h2*/
-.title {
-  font-weight: var(--head-weight);
+.section-title {
   font-size: var(--title-size);
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -189,13 +198,12 @@ button:focus {
 
 .team-item {
   /* background-color: var(--primary-background-color); */
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 /* имя фамилия h2 */
 .team-name {
-  font-weight: 500;
+  font-weight: var(--secondary-weight);
   font-size: var(--note-size);
   line-height: 1.18;
   letter-spacing: 0.03em;
@@ -207,7 +215,6 @@ button:focus {
   font-size: var(--note-size);
   line-height: 1.18;
   letter-spacing: 0.03em;
-  color: var(--text-color);
 }
 
 /* Footer */
@@ -233,7 +240,7 @@ button:focus {
 .footer-contacts {
   font-size: inherit;
   line-height: 1.71;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-address-color);
 }
 
 /* ПОРТФОЛИО */
@@ -253,8 +260,12 @@ button:focus {
   color: var(--primary-background-color);
 }
 
+.portf-item {
+  background: var(--primary-background-color);
+  border: 1px solid var(--portf-boarder-color);
+}
+
 .portf-name {
-  font-weight: var(--head-weight);
   font-size: var(--subtitle-size);
   line-height: 1.18;
   letter-spacing: 0.03em;
