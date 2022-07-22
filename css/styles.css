@@ -4,12 +4,14 @@
   --hero-background-color: #2f303a;
 
   --title-color: #212121;
+  --secondary-title-color: #ffffff;
   --text-color: #757575;
   --logo-color: #000000;
   --accent-color: #2196f3;
   --header-boarder-color: #ececec;
   --hero-hover-color: #188ce8;
   --footer-address-color: rgba(255, 255, 255, 0.6);
+  --portf-btn-color: #f5f4fa;
   --portf-boarder-color: #eeeeee;
 
   --main-font: "Roboto", sans-serif;
@@ -36,11 +38,6 @@ p {
   margin-bottom: 0;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 .body {
   padding-left: 15px;
   /* TODO: убрать в ДЗ№ 3 */
@@ -65,11 +62,12 @@ p {
   margin: -1px;
 }
 
-a {
+.link {
   text-decoration: none;
+  font-size: 14px;
   color: var(--title-color);
 }
-ul {
+.list {
   padding-left: 0;
   list-style: none;
 }
@@ -77,10 +75,6 @@ ul {
 .link:hover,
 .link:focus {
   color: var(--accent-color);
-}
-
-a:focus,
-button:focus {
   outline: none;
 }
 
@@ -88,15 +82,16 @@ button:focus {
   color: var(--accent-color);
 }
 
-button {
+.button {
   font-style: inherit;
   cursor: pointer;
   border: none;
   border-radius: 4px;
 }
 
-button:hover,
-button:focus {
+.button:hover,
+.button:focus {
+  outline: none;
   background-color: var(--accent-color);
 }
 
@@ -116,14 +111,12 @@ button:focus {
 /* кнопки навигации */
 .nav-link {
   font-weight: var(--secondary-weight);
-  font-size: inherit;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 /* адрес в header  */
 .header-contacts {
   font-weight: var(--secondary-weight);
-  font-size: inherit;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: inherit;
@@ -146,7 +139,7 @@ button:focus {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--primary-background-color);
+  color: var(--secondary-title-color);
 }
 /* кнопка героя */
 .hero-button {
@@ -160,7 +153,7 @@ button:focus {
   font-size: var(--note-size);
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: var(--primary-background-color);
+  color: var(--secondary-title-color);
   background-color: var(--accent-color);
 }
 
@@ -180,6 +173,7 @@ button:focus {
 }
 /* текст преимущества p */
 .advant-text {
+  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
@@ -223,7 +217,7 @@ button:focus {
 }
 
 .footer-logo {
-  color: var(--primary-background-color);
+  color: var(--secondary-title-color);
 }
 
 .address {
@@ -231,14 +225,12 @@ button:focus {
 }
 
 .footer-address {
-  font-size: inherit;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--primary-background-color);
+  color: var(--secondary-title-color);
 }
 
 .footer-contacts {
-  font-size: inherit;
   line-height: 1.71;
   color: var(--footer-address-color);
 }
@@ -246,18 +238,20 @@ button:focus {
 /* ПОРТФОЛИО */
 .portf-btn {
   padding: 6px 22px;
+  /* font-family: наследует от модерн нормал */
   font-weight: var(--secondary-weight);
   font-size: var(--note-size);
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
-  background-color: var(--secondary-background-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  background-color: var(--portf-btn-color);
 }
 
 .portf-btn:hover,
 .portf-btn:focus {
-  color: var(--primary-background-color);
+  color: var(--secondary-title-color);
 }
 
 .portf-item {
