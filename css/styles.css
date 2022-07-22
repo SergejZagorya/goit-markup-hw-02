@@ -173,7 +173,7 @@ p {
 }
 /* текст преимущества p */
 .advant-text {
-  font-size: 14px;
+  font-size: var(--text-size);
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
